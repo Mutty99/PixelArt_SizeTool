@@ -5,7 +5,7 @@ def process_image(input_image_path):
     img = Image.open(input_image_path)
     img = img.convert('RGBA')
     width, height = img.size
-    square_size = 9  # Edit value as needed: this is n, with a single "pixel" size being nxn actual pixels
+    square_size = 9  # Edit value as needed: this is n, with a single "pixel" size being 'n x n' actual pixels
 
     if width % square_size != 0 or height % square_size != 0:
         raise ValueError("Input error!")
@@ -25,7 +25,7 @@ def process_image(input_image_path):
 
 
 def create_pixel_art():
-    resolution = 100
+    resolution = 100  # Edit value as needed: this is the new square_size
     color_map, width, height, rows, columns = process_image('test.png')
 
     new_width = rows * resolution
